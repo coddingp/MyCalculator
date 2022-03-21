@@ -20,4 +20,6 @@
     <string name="calculator">Calculator</string>
     <string name="desh">_</string>
     <string name="dash">_</string>
+    <string name="percent">%</string>
+    <string name="backspace"><![CDATA[<]]></string>
 </resources>

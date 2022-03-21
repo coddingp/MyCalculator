@@ -14,22 +14,24 @@ class MainActivity : AppCompatActivity() {
         updateDisplay("")
     }
 
+    // operationList contains all the current operations
     val operationList: MutableList<String> = arrayListOf()
+    //numberCache contains all the current digits
     val numberCache: MutableList<String> = arrayListOf()
 
-
-    //I couldn't find mkString.. so I improvised
+    //This method returns string value of all the prev operations and digits
     fun makeString(list: List<String>,joiner: String = "") : String {
-
         if (list.isEmpty()) return ""
         return list.reduce { r, s -> r + joiner + s }
     }
 
+    // clearCache method clears all the cash of nums and operations used before
     fun clearCache() {
         numberCache.clear()
         operationList.clear()
     }
 
+    // updateDisplay shows what
     fun updateDisplay(mainDisplayString: String){
 
         val fullCalculationString = makeString(operationList, " ")
@@ -45,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         updateDisplay("")
     }
 
+    // equalsClick
     fun equalsClick(view: View) {
         operationList.add(makeString(numberCache))
         numberCache.clear()
@@ -87,6 +90,10 @@ class MainActivity : AppCompatActivity() {
         numberCache.add(numberString.toString())
         val text = makeString(numberCache)
         updateDisplay(text)
+    }
+    //I didn't finish it yet
+    fun backspace(view: View) {
+
     }
 
 }
