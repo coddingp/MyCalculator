@@ -33,12 +33,10 @@ class MainActivity : AppCompatActivity() {
 
     // updateDisplay shows what
     fun updateDisplay(mainDisplayString: String){
-
         val fullCalculationString = makeString(operationList, " ")
         var fullCalculationTextView = findViewById(R.id.fullCalculationText) as TextView
         fullCalculationTextView.text = fullCalculationString
-
-        val mainTextView = findViewById(R.id.textView) as TextView
+        val mainTextView = findViewById(R.id.textView1) as TextView
         mainTextView.text = mainDisplayString
     }
 
@@ -51,10 +49,8 @@ class MainActivity : AppCompatActivity() {
     fun equalsClick(view: View) {
         operationList.add(makeString(numberCache))
         numberCache.clear()
-
         val calculator = StringCalculator()
         val answer = calculator.calculate(operationList)
-
         updateDisplay("=" + answer.toString())
         clearCache()
     }
@@ -65,35 +61,31 @@ class MainActivity : AppCompatActivity() {
                 numberCache.removeAt(0)
             } else numberCache.add(0, "-")
         } else numberCache.add("-")
-
         val numberString = makeString(numberCache)
         updateDisplay(numberString)
     }
 
     fun buttonClick(view: View) {
-
         val button = view as Button
-
         if (numberCache.isEmpty()) return
-
         operationList.add(makeString(numberCache))
         numberCache.clear()
         operationList.add(button.text.toString())
-
         updateDisplay(button.text.toString())
     }
 
     fun numberClick(view: View) {
         val button = view as Button
         val numberString = button.text
-
         numberCache.add(numberString.toString())
         val text = makeString(numberCache)
         updateDisplay(text)
     }
-    //I didn't finish it yet
+
+    //backspace function deletes 1 last dialed digit
     fun backspace(view: View) {
-
+        val mainTextView = findViewById(R.id.textView1) as TextView
+        mainTextView.text = mainTextView.text.substring(0, mainTextView.text.length - 1)
+        numberCache.removeAt(numberCache.size-1)
     }
-
 }
