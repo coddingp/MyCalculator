@@ -22,4 +22,20 @@
     <string name="dash">_</string>
     <string name="percent">%</string>
     <string name="backspace"><![CDATA[<]]></string>
+    <string name="Dot">.</string>
+    <string name="pro">pro</string>
+    <string name="e">e</string>
+    <string name="pi">pi</string>
+    <string name="_1_x">1/x</string>
+    <string name="x">X!</string>
+    <string name="brackets">(</string>
+    <string name="rightBrackets">)</string>
+    <string name="tan">tan</string>
+    <string name="cos">cos</string>
+    <string name="sin">sin</string>
+    <string name="lg">lg</string>
+    <string name="in">in</string>
+    <string name="deg">deg</string>
+    <string name="_2nd">2nD</string>
+    <string name="root">√</string>
 </resources>

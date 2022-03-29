@@ -1,17 +1,17 @@
 package com.example.mycalculator
 
 import android.content.Intent
-import android.content.pm.ActivityInfo
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.content.pm.ActivityInfo
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import com.example.mycalculator.databinding.ActivityMainBinding
+import com.example.mycalculator.databinding.ActivityProBinding
 
-class MainActivity : AppCompatActivity() {
-    private val binding: ActivityMainBinding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
+class ProActivity : AppCompatActivity() {
+    private val binding: ActivityProBinding by lazy {
+        ActivityProBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -104,8 +104,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
+    //pro button makes a new activity
     fun pro(view: View) {
-        intent = Intent(this, ProActivity::class.java)
+        intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
+
+    //piClick button types pi number in the console 3.14159265359
+    fun piClick(view: View) {
+        numberCache.add(3.14159265359.toString())
+        binding.textView1.text = 3.14159265359.toString()
+    }
+
+
+
 }
