@@ -317,7 +317,7 @@
             android:onClick="equalsClick"
             android:text="@string/equal"
             android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
     </LinearLayout>

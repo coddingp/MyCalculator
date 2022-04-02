@@ -38,4 +38,7 @@
     <string name="deg">deg</string>
     <string name="_2nd">2nD</string>
     <string name="root">√</string>
+    <string name="xy">xY</string>
+    <string name="pow">pow</string>
+    <string name="ctn">ctn</string>
 </resources>
