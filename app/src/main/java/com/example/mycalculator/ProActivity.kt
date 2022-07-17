@@ -19,7 +19,7 @@ class ProActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        updateDisplay("")
+        updateDisplay("0")
     }
 
     // operationList contains all the current operations
@@ -53,7 +53,7 @@ class ProActivity : AppCompatActivity() {
     //clears display
     fun clearClick(view: View) {
         clearCache()
-        updateDisplay("")
+        updateDisplay("0")
     }
 
     // equalsClick
@@ -92,7 +92,7 @@ class ProActivity : AppCompatActivity() {
     //all number buttons
     fun numberClick(view: View) {
         val button = view as Button
-        if (!button.text.equals("pro")) {
+        if (!button.text.equals("←")) {
             val numberString = button.text
             numberCache.add(numberString.toString())
             val text = makeString(numberCache)
@@ -115,7 +115,7 @@ class ProActivity : AppCompatActivity() {
     }
 
     //pro button makes a new activity
-    fun pro(view: View) {
+    fun back(view: View) {
         intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }

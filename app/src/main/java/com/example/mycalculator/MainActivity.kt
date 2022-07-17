@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        updateDisplay("")
+        updateDisplay("0")
     }
 
 
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     //clears display
     fun clearClick(view: View) {
         clearCache()
-        updateDisplay("")
+        updateDisplay("0")
     }
 
     // equalsClick
